@@ -7,7 +7,7 @@
  *
  * Return: pointer to the new node, or NULL if it fails
  */
-listint_t *add_nodeint_end(listint_t **head, const int b)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *new;
 	listint_t *temp = *head;
@@ -16,7 +16,7 @@ listint_t *add_nodeint_end(listint_t **head, const int b)
 	if (!new)
 		return (NULL);
 
-	new->b = b;
+	new->n = n;
 	new->next = NULL;
 
 	if (*head == NULL)
